@@ -5,7 +5,7 @@ The goal of this project is to train a neural network for driving a car in the [
 - Prerequisites
 - What is in each file?
 - Training the model
-- [Testing the model](#Testing-the-model)
+- [Testing the model](#testing-the-model)
 - Further work
 
 ## Prerequisites
