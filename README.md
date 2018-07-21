@@ -6,6 +6,8 @@ The goal of this project is to train a neural network for driving a car in the [
 - What is in each file?
 - Training the model
 - [Testing the model](#testing-the-model)
+    - [No traffic](#no-traffic)
+    - [Dynamic traffic](#dynamic-traffic)
 - Further work
 
 ## Prerequisites
@@ -33,6 +35,20 @@ Some optional arguments with the default values in the parenthesis-
 - `--log_file` path to an existing or new file - a log of training is written in this file (log.txt).
 
 ## Testing the model
+
+### No traffic
+[Download](https://github.com/udacity/self-driving-car-sim) the Udacity simulator Version 2 and make the file executable:
+```shell
+sudo chmod +x beta_simulator.x86_64
+```
+Run the simulator, choose the `Jungle` track and `Autonomous Mode`.  
+Run the pre-trained model:
+```shell
+python3 test_h5.py model.h5
+```
+
+### Dynamic traffic
+
 Download the Term 3 simulator from the latest [release](https://github.com/udacity/self-driving-car-sim/releases) and make the file executable:
 
 ```shell
