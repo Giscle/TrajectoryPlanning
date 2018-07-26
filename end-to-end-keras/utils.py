@@ -2,7 +2,6 @@ import cv2, os
 import numpy as np
 import matplotlib.image as mpimg
 
-
 IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 66, 200, 3
 INPUT_SHAPE = (IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS)
 
@@ -18,7 +17,7 @@ def crop(image):
     """
     Crop the image (removing the sky at the top and the car front at the bottom)
     """
-    return image[60:-25, :, :] # remove the sky and the car front
+    return image[60:-25, :, :]  # remove the sky and the car front
 
 
 def resize(image):
@@ -52,9 +51,9 @@ def choose_image(data_dir, center, left, right, steering_angle):
     """
     choice = np.random.choice(3)
     if choice == 0:
-        return load_image(data_dir, left), steering_angle + 0.2
+        return load_image(data_dir, left), float(steering_angle) + 0.2
     elif choice == 1:
-        return load_image(data_dir, right), steering_angle - 0.2
+        return load_image(data_dir, right), float(steering_angle) - 0.2
     return load_image(data_dir, center), steering_angle
 
 
@@ -97,7 +96,7 @@ def random_shadow(image):
     # as x2 == x1 causes zero-division problem, we'll write it in the below form:
     # (ym-y1)*(x2-x1) - (y2-y1)*(xm-x1) > 0
     mask = np.zeros_like(image[:, :, 1])
-    mask[np.where(ym - y1) * (x2 - x1) - (y2 - y1) * (xm - x1) > 0] = 1
+    mask[np.where((ym - y1) * (x2 - x1) - (y2 - y1) * (xm - x1) > 0)] = 1
 
     # choose which side should have shadow and adjust saturation
     cond = mask == np.random.randint(2)
