@@ -1,3 +1,0 @@
-/home/abhijeet/Downloads/Giscle/CarND-Path-Planning-Project-master/build/CMakeFiles/edit_cache.dir
-/home/abhijeet/Downloads/Giscle/CarND-Path-Planning-Project-master/build/CMakeFiles/rebuild_cache.dir
-/home/abhijeet/Downloads/Giscle/CarND-Path-Planning-Project-master/build/CMakeFiles/path_planning.dir
