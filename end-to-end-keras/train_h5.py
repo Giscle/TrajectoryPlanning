@@ -27,6 +27,20 @@ def load_data(args):
 
     # Input data is images from the 3 cameras
     X = data_df[['center', 'left', 'right']].values
+
+    # Abhijeet Singh: Modified code to take relative paths for images
+    # rows
+    for i in range(X.shape[0]):
+    	# columns
+    	for j in range(X.shape[1]):
+    		# absolute path
+    		string = X[i, j]
+    		split = string.find('IMG')
+    		# relative path
+    		string = string[split:]
+    		X[i, j] = string
+    # Abhijeet Singh: Modified code end
+
     # Output data is steering command
     y = data_df['steering'].values
 
