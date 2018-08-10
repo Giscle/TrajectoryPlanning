@@ -1,5 +1,5 @@
 # Trajectory Planning
-The goal of this project is to train a neural network for driving a car in the [Udacity self-driving simulator](https://github.com/udacity/self-driving-car-sim) and help it keep on the road.
+The goal of this project is to train a neural network for driving a car in the Udacity self-driving simulator and Airsim Simulator help it keep on the road.
 
 ## List of contents
 - Prerequisites
